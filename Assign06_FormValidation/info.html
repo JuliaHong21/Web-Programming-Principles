@@ -1,0 +1,100 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Hong's Information</title>
+    <link href="normalize.css" rel="stylesheet" />
+    <script src="info.js"></script>
+</head>
+<body>
+    <header>      
+        <div>
+            <h1>Oreo O's Reserch Camp</h1>                    
+        </div>
+        <div id="logo">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/91wQpRgAYYL._SL1500_.jpg" alt="logo" width="50" height="50">
+        </div>
+        
+    </header>
+    <div class="main-container">
+        <!--menu-->   
+        <nav id="navi">
+                    <h2>Menu</h2>
+                    <li><a href="honesty.html">Honesty</a></li>
+                    <li><a href="info.html">Information</a></li>
+            </nav>
+        <!--form--> 
+            <div class="mid">                          
+            <h1>Information Form</h1>
+            <form id="signup" name="signup" method="post" 
+                action="https://httpbin.org/post"
+                onsubmit="return formValidation();">
+        <!--name-->
+            <h4>Name</h4>
+            <label for="fName">First Name: </label><br>
+            <input type="text" name="fName" id="fName" required="required" onchange="validatefName()"/><br>           
+            <label for="lName">Last Name: </label><br>
+            <input type="text" name="lName" id="lName" required="required" onchange="validatelName()"/><br><br>
+        <!--PW and User name--> 
+            <h4>Password and User Name</h4>
+            <label for="password">Password: </label><br>
+            <input type="password" name="password" id="password" required="required" onchange="validatePass()"/><br>
+            <label for="confirmPassword">Confirm Password: </label><br>
+            <input type="password" name="confirmPassword" id="confirmPassword" required="required" onchange="validateConfirmPass()"/><br>
+            <label for="username">Username: </label><br>
+            <input type="text" name="username" id="username" required="required" onchange="validateUsername()"/><br><br>    
+        <!--Education level and status-->    
+            <h4>Education</h4>         
+            <label for="edulevel">Education Level: </label><br>           
+            <select name="edulevel" required="required"> <br>
+                <option value = "0">- select -</option>
+                <option value = "Technical Diplom">Technical Diploma</option>
+                <option value = "College Diploma">College Diploma</option>
+                <option value = "Bachelor's Degree">Bachelor's Degree</option>
+                <option value = "Master's Degree and Others">Master's Degree and Others</option>            
+            </select><br><br>                   
+            <label for="edustatus">Education Status </label><br>
+            <input type="radio" name="edustatus" value="Graduated" required="required" onchange="validateEdustatus()" /> Graduated
+            <input type="radio" name="edustatus" value="Current enrolled" onchange="validateEdustatus()"/> Current enrolled
+            <input type="radio" name="edustatus" value="Did not graduate" onchange="validateEdustatus()"/> Did not graduate<br><br>
+        <!--Email-->      
+            <h4>Contact</h4>      
+            <label for="email">Email: </label><br>
+            <input type="email" name="email" id="email" placeholder="name1@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="required" title="Must be email address with @"  />  <br><br>           
+        <!--Age-->      
+            <h4>Age</h4>
+            <label for="age">Age: </label><br>
+            <input  type="text" name="age" id="age" required="required" onchange="validateAge()"/><br><br>       
+        <!--hidden-->       
+            <input type="hidden" name="lastName" id="lastName" value="Hong"/>
+            <input type="hidden" name="studentId" id="studentId" value="159100171"/>
+        <!--submit and reset-->      
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset" onclick="clearErrors()">
+            </p>    
+              
+
+        </form>     <!--the form is over-->      
+    </div>
+        <!--side-->  
+        <div class="side">
+            <h2>Errors</h2>
+            <div id="fNameError"></div>
+            <div id="lNameError"></div>            
+            <div id="passError"></div>            
+            <div id="ConfirmPassError"></div>
+            <div id="usernameError"></div>
+            <div id="edulevelError"></div>
+            <div id="edustatusError"></div>
+            <div id="ageError"></div>            
+            <div id="emailError"></div>          
+        </div>
+        <!--footer-->          
+        <footer>
+            <div class="bottom">
+                &copy; 2019 Youngeun Hong
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

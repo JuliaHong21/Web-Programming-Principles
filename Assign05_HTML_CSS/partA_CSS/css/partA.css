@@ -1,0 +1,58 @@
+/* write your CSS rules here or in the HTML document */
+
+/* task 1 */
+.main-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* task 2 */
+  h2{
+    color:darkblue; 
+    background-color:#cccccc;
+  }
+  
+  /* task 3 */
+  #paragraph2{
+    font-family: "Comic Sans MS", "Comic Sans", cursive; 
+    font-size: 20pt;
+  }
+  
+  /* task 4 */
+  span.on{
+    color:#5cb85c;
+    font-weight:bold;
+    text-decoration:underline;
+  }
+  
+  /* task 5 */
+  #section2 table {
+    background: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX23025384.jpg") repeat;
+    color:#2f4f4f;
+  }
+  
+  /* task 6 */
+  #section2 thead, tfoot{
+    background: rgba(255, 255, 0, 0.6);
+    font-style: italic; 
+  }
+  
+  /* task 7 */
+  p:hover {
+    color: #00f;
+  }
+  
+  /* task 8 */
+  ol ul {
+    list-style-type: square;
+  }
+  
+  ol {
+    list-style-type: lower-alpha;
+  }
+  
+  /* task 9 */
+  footer{
+    text-align: center;
+    
+  }

@@ -1,0 +1,54 @@
+
+/*******************************************************************************
+* WEB222 – Assignment 2
+* I declare that this assignment is my own work in accordance with Seneca
+* Academic Policy. No part of this assignment has been copied manually or
+* electronically from any other source (including web sites) or distributed to
+* other students.
+*
+* Name: Youngeun Hong___ Student ID: 159100171___ Date: February 09, 2019___
+*
+******************************************************************************/
+ 
+
+
+/*****************************
+* Part A
+*****************************/
+var people = [{"id":1,"first_name":"Osbourne","last_name":"Pick","gender":"Male","birthDate":"1999-05-04T03:05:18Z","email":"opick0@e-recht24.de","web":"http://csmonitor.com","creditScore":215,"rating":3.45},
+{"id":2,"first_name":"Loy","last_name":"Yakovliv","gender":"Male","birthDate":"1992-04-14T06:20:53Z","email":"lyakovliv1@arizona.edu","web":"http://china.com.cn","creditScore":203,"rating":9.67},
+{"id":3,"first_name":"Andre","last_name":"Cruce","gender":"Male","birthDate":"1993-10-12T22:45:28Z","email":"acruce2@nifty.com","web":"https://berkeley.edu","creditScore":389,"rating":4.08},
+{"id":4,"first_name":"Armstrong","last_name":"Mattson","gender":"Male","birthDate":"1998-07-09T12:06:30Z","email":"amattson3@mashable.com","web":"https://msn.com","creditScore":608,"rating":4.52},
+{"id":5,"first_name":"Brendis","last_name":"Bousfield","gender":"Male","birthDate":"1997-06-15T16:51:59Z","email":"bbousfield4@reddit.com","web":"https://icio.us","creditScore":469,"rating":17.2},
+{"id":6,"first_name":"Selie","last_name":"Alderman","gender":"Female","birthDate":"1995-06-28T09:52:12Z","email":"salderman5@webs.com","web":"https://howstuffworks.com","creditScore":708,"rating":8.37},
+{"id":7,"first_name":"Joshua","last_name":"Lownes","gender":"Male","birthDate":"1995-11-14T06:07:00Z","email":"jlownes6@hhs.gov","web":"http://sbwire.com","creditScore":350,"rating":15.17},
+{"id":8,"first_name":"Mufinella","last_name":"Shiers","gender":"Female","birthDate":"1998-07-14T23:51:28Z","email":"mshiers7@oakley.com","web":"https://imgur.com","creditScore":286,"rating":18.91},
+{"id":9,"first_name":"Sasha","last_name":"Willey","gender":"Female","birthDate":"1995-01-02T09:38:00Z","email":"swilley8@miitbeian.gov.cn","web":"http://hexun.com","creditScore":547,"rating":14.69},
+{"id":10,"first_name":"Rochella","last_name":"Evensden","gender":"Female","birthDate":"1999-09-19T18:39:00Z","email":"revensden9@home.pl","web":"https://theatlantic.com","creditScore":534,"rating":13.2},
+];
+
+
+//Task 1
+function capNotFirstLetter(str){ 
+  return str.charAt(0).toLowerCase() + str.substring(1,str.length).toUpperCase(); 
+}
+
+
+//Task 2
+var data = people.map(p=>p);
+var swichCase = data.map(p => capNotFirstLetter(p.first_name));
+console.log(swichCase); 
+
+
+//Task 3
+var filtering = data.filter(d => d.creditScore > 400);
+console.log(filtering);
+
+
+//Task 4
+
+data.sort(function(a,b){
+            return new Date(a.birthDate) - new Date(b.birthDate);
+});
+console.log(data);
+

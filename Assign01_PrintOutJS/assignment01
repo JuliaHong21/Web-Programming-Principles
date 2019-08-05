@@ -1,0 +1,136 @@
+/*
+ * This is a JavaScript Scratchpad.
+ *
+ * Enter some JavaScript, then Right Click or choose from the Execute Menu:
+ * 1. Run to evaluate the selected text (Ctrl+R),
+ * 2. Inspect to bring up an Object Inspector on the result (Ctrl+I), or,
+ * 3. Display to insert the result in a comment after the selection. (Ctrl+L)
+ */
+
+/* WEB222 – Assignment 01
+ * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of
+ * this assignment has been copied manually or electronically from any other source (including web sites)
+ * or distributed to other students.
+ *
+ * Name: Youngeun Hong   Student ID:159100171    Date: 28 JAN 2019
+ */
+
+//******************************************************************************
+/* Task 1
+
+1) infinity
+It is one of the data types which is displayed if a number is bigger than the upper limit 
+of the floating point numbers(1.797693134862315E+308). For example, 
+if there is a mathematical error, such as a value divided by 0, or 
+if you calculate values that are too large, JavaScript displays infinity.
+
+2) Undefined
+It is a state in which a variable is defined but no value is assigned. 
+For instance, after declaring a variable without assigning a value,
+when you use the variable as a function parameter, 'undefined' will be shown.
+
+3) NaN
+It stands for Not a Number and it is the numerical value which is not a number. 
+For example, if you try to convert something that cannot be converted to a number,
+it would be converted to NaN.
+*/
+
+//******************************************************************************
+//Task2
+
+console.log("1010(binary) to decimal " + parseInt('1010', 2));
+console.log("AF(hex) to decimal " + parseInt('AF', 16));
+console.log("713(octol) to decimal " + parseInt('713', 8));
+
+//******************************************************************************
+//task3
+
+var CelTem = 20; 
+var convertedTem=(CelTem*9/5)+32;
+console.log(CelTem + "°C is " + convertedTem + "°F");
+
+var FahTem = 68;
+var newTem=(FahTem - 32) * 5/9;
+console.log(FahTem + "°F is " + newTem + "°C");
+
+//******************************************************************************
+//task4
+
+//the declaration approach
+function largerNum(num1, num2){
+  var large;
+  
+  if(num1>num2){
+    large = num1;
+  }
+  
+  else {
+    large = num2;
+  }
+  
+  return large;
+}
+
+//the expression approach
+var exLarge = function(num1, num2){
+  var large
+  if(num1>num2){
+    large = num1;
+  }
+  
+  else {
+    large = num2;
+  }
+  
+  return large;
+}
+
+console.log("The larger number of 5 and 12 is " + largerNum(5, 12) );
+console.log("The larger number of 21 and 57 is " + exLarge(21, 57) );
+
+//******************************************************************************
+//task5
+function Evaluator(){
+  var sum = 0;
+  var average = 0;
+  
+  for(var i=0 ; i<arguments.length ; i++){
+    sum += arguments[i];
+  }
+  
+  average = sum / arguments.length;
+  
+  return average >= 25;
+}
+
+console.log("Average grater than or equal to 25: " + Evaluator(1, 245));
+console.log("Average grater than or equal to 25: " + Evaluator(1, 2, 5));
+console.log("Average grater than or equal to 25: " + Evaluator(30, 45, 36, 66));
+
+//******************************************************************************
+//task6
+function showMultiples(num, numMultiples){
+  var total = 0;
+  
+  for(var i=0; i<numMultiples; i++){
+    total = num * (i+1);
+    console.log(num + " x " + (i+1) + " = " + total);
+  }
+}
+
+showMultiples(5,4);
+
+//******************************************************************************
+//task7
+var Increment = (function () { 
+  var counter = 100;  
+  return function () {counter += 100; return counter;}})();
+
+var result = Increment();
+result = Increment();
+result = Increment();
+console.log("The final value is " + result);
+
+//******************************************************************************
+
+
